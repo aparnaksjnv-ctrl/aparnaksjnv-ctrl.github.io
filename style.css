@@ -433,22 +433,15 @@ details,
 .project-visual {
   min-height: 260px;
   position: relative;
+  overflow: hidden;
 }
 
-.visual-grid {
-  background:
-    linear-gradient(rgba(255, 104, 198, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 104, 198, 0.08) 1px, transparent 1px),
-    radial-gradient(circle at 20% 20%, rgba(200, 107, 255, 0.22), transparent 20%),
-    linear-gradient(135deg, #120813 0%, #311131 55%, #0a050d 100%);
-  background-size: 28px 28px, 28px 28px, auto, auto;
-}
-
-.visual-breach {
-  background:
-    radial-gradient(circle at 80% 22%, rgba(255, 104, 198, 0.28), transparent 16%),
-    linear-gradient(180deg, rgba(200, 107, 255, 0.08), transparent 28%),
-    linear-gradient(145deg, #0d0710 0%, #29102f 48%, #09050c 100%);
+.project-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  object-fit: cover;
 }
 
 .project-content {

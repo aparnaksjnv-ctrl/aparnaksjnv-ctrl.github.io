@@ -410,7 +410,7 @@ details,
 .education-panel h2,
 .cert-panel h2,
 .contact-section h2 {
-  font-size: clamp(2rem, 4.4vw, 3.4rem);
+  font-size: clamp(1.75rem, 3.8vw, 2.8rem);
   max-width: 14ch;
   font-weight: 700;
   color: #f3f3f6;
@@ -472,7 +472,7 @@ details,
 .education-card h3,
 .cert-card h3 {
   margin: 0.35rem 0 0.7rem;
-  font-size: 1.32rem;
+  font-size: 1.18rem;
   font-weight: 700;
   letter-spacing: 0.01em;
   color: #f0f1f4;
@@ -542,7 +542,7 @@ summary {
 
 .summary-card h3 {
   margin: 0 0 0.45rem;
-  font-size: 1.24rem;
+  font-size: 1.12rem;
   font-weight: 700;
   color: #f0f1f4;
 }

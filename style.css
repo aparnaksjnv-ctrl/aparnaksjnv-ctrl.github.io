@@ -283,9 +283,9 @@ a {
 
 .profile-card img {
   display: block;
-  width: min(100%, 290px);
+  width: min(100%, 230px);
   margin: 0 auto;
-  aspect-ratio: 0.82 / 1;
+  aspect-ratio: 0.78 / 1;
   object-fit: cover;
   border-radius: calc(var(--radius) - 8px);
   border: 1px solid rgba(181, 148, 171, 0.12);
@@ -510,16 +510,55 @@ summary {
 .skill-graph-panel,
 .timeline-card,
 .education-card,
-.cert-card {
+.cert-card,
+.summary-card {
   padding: 1.4rem;
 }
 
 .service-list,
 .graph-list,
 .education-list,
-.cert-list {
+.cert-list,
+.summary-list {
   display: grid;
   gap: 1rem;
+}
+
+.summary-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.summary-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.summary-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.02));
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.summary-card h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #f0f1f4;
+}
+
+.summary-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+  font-size: 0.96rem;
+}
+
+.summary-meta {
+  margin-bottom: 0.6rem;
+  color: var(--accent);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
 }
 
 .service-card span {
@@ -677,7 +716,8 @@ summary {
   }
 
   .skill-panels,
-  .metric-grid {
+  .metric-grid,
+  .summary-list {
     grid-template-columns: 1fr;
   }
 

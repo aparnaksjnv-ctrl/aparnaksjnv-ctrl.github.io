@@ -1,13 +1,13 @@
 :root {
-  --bg: #061015;
-  --bg-alt: #0a171e;
-  --panel: rgba(16, 27, 35, 0.86);
-  --panel-soft: rgba(12, 21, 27, 0.72);
-  --text: #edf7f1;
-  --muted: #90a6a0;
-  --accent: #32ff7e;
-  --accent-soft: rgba(50, 255, 126, 0.16);
-  --line: rgba(90, 120, 109, 0.26);
+  --bg: #09050d;
+  --bg-alt: #13081a;
+  --panel: rgba(28, 13, 34, 0.88);
+  --panel-soft: rgba(20, 10, 26, 0.76);
+  --text: #f7ecf6;
+  --muted: #ccb4ce;
+  --accent: #ff68c6;
+  --accent-soft: rgba(255, 104, 198, 0.16);
+  --line: rgba(219, 128, 233, 0.24);
   --shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
   --radius: 24px;
 }
@@ -25,10 +25,11 @@ body {
   min-height: 100vh;
   color: var(--text);
   background:
-    radial-gradient(circle at top right, rgba(50, 255, 126, 0.1), transparent 24%),
-    radial-gradient(circle at bottom left, rgba(39, 58, 70, 0.45), transparent 20%),
-    linear-gradient(180deg, #03090d 0%, #071016 42%, #050b0f 100%);
-  font-family: "Space Grotesk", sans-serif;
+    radial-gradient(circle at top right, rgba(255, 104, 198, 0.16), transparent 24%),
+    radial-gradient(circle at bottom left, rgba(170, 92, 255, 0.18), transparent 22%),
+    linear-gradient(180deg, #050308 0%, #0c0610 42%, #030205 100%);
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-weight: 400;
 }
 
 body::before {
@@ -41,6 +42,17 @@ body::before {
   background-size: 28px 28px;
   pointer-events: none;
   opacity: 0.5;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.05), transparent 18%),
+    radial-gradient(circle at 82% 12%, rgba(255, 104, 198, 0.08), transparent 20%),
+    radial-gradient(circle at 50% 100%, rgba(200, 107, 255, 0.08), transparent 28%);
+  pointer-events: none;
 }
 
 a {
@@ -69,7 +81,7 @@ a {
 }
 
 .scanline {
-  background: linear-gradient(transparent 0%, rgba(50, 255, 126, 0.03) 50%, transparent 100%);
+  background: linear-gradient(transparent 0%, rgba(255, 104, 198, 0.03) 50%, transparent 100%);
   background-size: 100% 7px;
   opacity: 0.18;
 }
@@ -107,7 +119,7 @@ a {
 }
 
 .brand {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--accent);
   letter-spacing: 0.14em;
 }
@@ -116,7 +128,7 @@ a {
   display: flex;
   gap: 1.3rem;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.88rem;
 }
 
 .site-nav a:hover,
@@ -152,17 +164,20 @@ a {
   margin: 0;
   line-height: 0.96;
   letter-spacing: -0.04em;
+  text-wrap: balance;
 }
 
 .hero h1 {
-  font-size: clamp(3.6rem, 9vw, 7rem);
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 700;
 }
 
 .hero-lead {
   max-width: 17ch;
-  font-size: clamp(1.3rem, 2.4vw, 2rem);
+  font-size: clamp(1.05rem, 2vw, 1.55rem);
   line-height: 1.1;
   margin: 1rem 0 1.2rem;
+  font-weight: 400;
 }
 
 .hero-text,
@@ -175,6 +190,8 @@ a {
 .contact-copy {
   color: var(--muted);
   line-height: 1.75;
+  font-size: 0.98rem;
+  font-weight: 400;
 }
 
 .hero-text {
@@ -197,8 +214,8 @@ a {
   padding: 0.9rem 1.25rem;
   border-radius: 999px;
   border: 1px solid transparent;
-  font-weight: 700;
-  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  font-weight: 500;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
 }
 
 .button:hover,
@@ -207,14 +224,22 @@ a {
 }
 
 .button-primary {
-  color: #02120a;
-  background: linear-gradient(135deg, #32ff7e 0%, #95ffbe 100%);
-  box-shadow: 0 14px 34px rgba(50, 255, 126, 0.2);
+  color: #200617;
+  background: linear-gradient(135deg, #ff68c6 0%, #c86bff 100%);
+  box-shadow:
+    0 14px 34px rgba(255, 104, 198, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }
 
 .button-secondary {
   border-color: var(--line);
-  background: rgba(255, 255, 255, 0.02);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+}
+
+.button-secondary:hover,
+.button-secondary:focus-visible {
+  border-color: rgba(255, 104, 198, 0.4);
+  box-shadow: 0 10px 24px rgba(255, 104, 198, 0.12);
 }
 
 .hero-links {
@@ -223,7 +248,7 @@ a {
   gap: 0.8rem 1.2rem;
   margin-top: 1.4rem;
   font-size: 0.82rem;
-  color: #afc0ba;
+  color: #ddb9e0;
 }
 
 .terminal-card,
@@ -236,10 +261,10 @@ a {
 .education-card,
 .cert-card,
 .contact-section {
-  background: linear-gradient(180deg, rgba(19, 30, 38, 0.95), rgba(10, 18, 23, 0.84));
+  background: linear-gradient(180deg, rgba(35, 14, 39, 0.95), rgba(16, 7, 20, 0.88));
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 .terminal-card {
@@ -249,16 +274,17 @@ a {
 .profile-card {
   padding: 0.9rem;
   margin-bottom: 1rem;
-  background: linear-gradient(180deg, rgba(19, 30, 38, 0.95), rgba(10, 18, 23, 0.84));
+  background: linear-gradient(180deg, rgba(35, 14, 39, 0.95), rgba(16, 7, 20, 0.88));
 }
 
 .profile-card img {
   display: block;
-  width: 100%;
-  aspect-ratio: 1 / 1;
+  width: min(100%, 320px);
+  margin: 0 auto;
+  aspect-ratio: 0.9 / 1;
   object-fit: cover;
   border-radius: calc(var(--radius) - 8px);
-  border: 1px solid rgba(50, 255, 126, 0.18);
+  border: 1px solid rgba(255, 104, 198, 0.2);
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03);
 }
 
@@ -291,9 +317,9 @@ a {
 
 .terminal-body {
   padding: 1.5rem;
-  font-size: 0.93rem;
+  font-size: 0.88rem;
   line-height: 1.8;
-  color: #d8e8e0;
+  color: #f1dff2;
 }
 
 .prompt,
@@ -317,7 +343,7 @@ details,
 .timeline-card,
 .education-card,
 .cert-card {
-  background: rgba(255, 255, 255, 0.02);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015));
 }
 
 .metric-grid article {
@@ -330,7 +356,7 @@ details,
   display: block;
   color: var(--accent);
   font-family: "IBM Plex Mono", monospace;
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   margin-bottom: 0.4rem;
 }
 
@@ -352,7 +378,7 @@ details,
   gap: 2rem;
   width: max-content;
   white-space: nowrap;
-  color: #b4cac1;
+  color: #e0c2e2;
   font-family: "IBM Plex Mono", monospace;
   animation: slide 28s linear infinite;
 }
@@ -379,8 +405,9 @@ details,
 .education-panel h2,
 .cert-panel h2,
 .contact-section h2 {
-  font-size: clamp(2rem, 4.5vw, 3.8rem);
+  font-size: clamp(1.7rem, 4vw, 3rem);
   max-width: 14ch;
+  font-weight: 700;
 }
 
 .project-grid {
@@ -404,18 +431,18 @@ details,
 
 .visual-grid {
   background:
-    linear-gradient(rgba(50, 255, 126, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(50, 255, 126, 0.08) 1px, transparent 1px),
-    radial-gradient(circle at 20% 20%, rgba(50, 255, 126, 0.22), transparent 20%),
-    linear-gradient(135deg, #0a151b 0%, #13272b 55%, #091115 100%);
+    linear-gradient(rgba(255, 104, 198, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 104, 198, 0.08) 1px, transparent 1px),
+    radial-gradient(circle at 20% 20%, rgba(200, 107, 255, 0.22), transparent 20%),
+    linear-gradient(135deg, #120813 0%, #311131 55%, #0a050d 100%);
   background-size: 28px 28px, 28px 28px, auto, auto;
 }
 
 .visual-breach {
   background:
-    radial-gradient(circle at 80% 22%, rgba(50, 255, 126, 0.28), transparent 16%),
-    linear-gradient(180deg, rgba(50, 255, 126, 0.08), transparent 28%),
-    linear-gradient(145deg, #091015 0%, #15242d 48%, #0c1319 100%);
+    radial-gradient(circle at 80% 22%, rgba(255, 104, 198, 0.28), transparent 16%),
+    linear-gradient(180deg, rgba(200, 107, 255, 0.08), transparent 28%),
+    linear-gradient(145deg, #0d0710 0%, #29102f 48%, #09050c 100%);
 }
 
 .project-content {
@@ -436,7 +463,9 @@ details,
 .education-card h3,
 .cert-card h3 {
   margin: 0.35rem 0 0.7rem;
-  font-size: 1.45rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
 }
 
 details {
@@ -450,6 +479,7 @@ summary {
   cursor: pointer;
   color: var(--accent);
   font-family: "IBM Plex Mono", monospace;
+  font-size: 0.85rem;
 }
 
 .section-split {
@@ -496,6 +526,7 @@ summary {
   padding: 1rem;
   border: 1px solid var(--line);
   border-radius: 18px;
+  backdrop-filter: blur(10px);
 }
 
 .graph-label {
@@ -517,8 +548,8 @@ summary {
   display: block;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, #145a33 0%, #32ff7e 100%);
-  box-shadow: 0 0 18px rgba(50, 255, 126, 0.4);
+  background: linear-gradient(90deg, #8a2be2 0%, #ff68c6 100%);
+  box-shadow: 0 0 18px rgba(255, 104, 198, 0.35);
 }
 
 .timeline {
@@ -543,6 +574,19 @@ summary {
   justify-content: space-between;
   align-items: center;
   gap: 1.5rem;
+}
+
+.service-card,
+.skill-card,
+.timeline-card,
+.education-card,
+.cert-card,
+.project-card,
+.skill-graph-panel,
+.terminal-card,
+.profile-card,
+.contact-section {
+  backdrop-filter: blur(12px);
 }
 
 [data-reveal] {
@@ -597,6 +641,6 @@ summary {
   }
 
   .hero h1 {
-    font-size: clamp(3rem, 16vw, 5rem);
+    font-size: clamp(2.4rem, 14vw, 4rem);
   }
 }

@@ -410,7 +410,7 @@ details,
 .education-panel h2,
 .cert-panel h2,
 .contact-section h2 {
-  font-size: clamp(1.75rem, 3.8vw, 2.8rem);
+  font-size: clamp(1.9rem, 4vw, 3rem);
   max-width: 14ch;
   font-weight: 700;
   color: #f3f3f6;

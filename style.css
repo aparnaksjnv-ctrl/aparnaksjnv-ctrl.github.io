@@ -150,12 +150,12 @@ a {
 
 .eyebrow {
   margin: 0 0 1rem;
-  color: var(--accent);
+  color: #d3b5c8;
   font-size: 0.86rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   font-weight: 600;
-  text-shadow: 0 0 18px rgba(181, 148, 171, 0.16);
+  text-shadow: 0 0 18px rgba(211, 181, 200, 0.18);
 }
 
 .hero h1,

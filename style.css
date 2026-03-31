@@ -1,13 +1,13 @@
 :root {
-  --bg: #0d0d14;
-  --bg-alt: #171823;
-  --panel: rgba(24, 25, 35, 0.86);
-  --panel-soft: rgba(20, 21, 30, 0.76);
-  --text: #f5f3f7;
-  --muted: #c3bcc7;
-  --accent: #b38aa8;
-  --accent-soft: rgba(179, 138, 168, 0.14);
-  --line: rgba(189, 180, 197, 0.16);
+  --bg: #0b1018;
+  --bg-alt: #161d28;
+  --panel: rgba(22, 28, 40, 0.88);
+  --panel-soft: rgba(19, 24, 34, 0.78);
+  --text: #f4f3f7;
+  --muted: #bfc3cf;
+  --accent: #b594ab;
+  --accent-soft: rgba(181, 148, 171, 0.12);
+  --line: rgba(182, 190, 204, 0.14);
   --shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
   --radius: 24px;
 }
@@ -25,9 +25,9 @@ body {
   min-height: 100vh;
   color: var(--text);
   background:
-    radial-gradient(circle at top right, rgba(179, 138, 168, 0.09), transparent 24%),
-    radial-gradient(circle at bottom left, rgba(109, 113, 145, 0.12), transparent 22%),
-    linear-gradient(180deg, #0a0b12 0%, #12131c 42%, #090a10 100%);
+    radial-gradient(circle at top right, rgba(181, 148, 171, 0.06), transparent 24%),
+    radial-gradient(circle at bottom left, rgba(87, 101, 132, 0.1), transparent 24%),
+    linear-gradient(180deg, #081019 0%, #101723 42%, #090d15 100%);
   font-family: "Cormorant Garamond", "Times New Roman", serif;
   font-weight: 400;
 }
@@ -50,8 +50,8 @@ body::after {
   inset: 0;
   background:
     radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.05), transparent 18%),
-    radial-gradient(circle at 82% 12%, rgba(179, 138, 168, 0.06), transparent 20%),
-    radial-gradient(circle at 50% 100%, rgba(127, 116, 143, 0.08), transparent 28%);
+    radial-gradient(circle at 82% 12%, rgba(181, 148, 171, 0.04), transparent 20%),
+    radial-gradient(circle at 50% 100%, rgba(106, 118, 146, 0.06), transparent 28%);
   pointer-events: none;
 }
 
@@ -81,7 +81,7 @@ a {
 }
 
 .scanline {
-  background: linear-gradient(transparent 0%, rgba(179, 138, 168, 0.018) 50%, transparent 100%);
+  background: linear-gradient(transparent 0%, rgba(181, 148, 171, 0.012) 50%, transparent 100%);
   background-size: 100% 7px;
   opacity: 0.18;
 }
@@ -172,7 +172,7 @@ a {
 .hero h1 {
   font-size: clamp(2.4rem, 6.5vw, 4.4rem);
   font-weight: 700;
-  color: #f7f5f8;
+  color: #f5f5f7;
 }
 
 .hero-lead {
@@ -181,7 +181,7 @@ a {
   line-height: 1.2;
   margin: 1rem 0 1.2rem;
   font-weight: 400;
-  color: #ddd4de;
+  color: #d7d5dd;
 }
 
 .hero-text,
@@ -228,10 +228,10 @@ a {
 }
 
 .button-primary {
-  color: #211922;
-  background: linear-gradient(135deg, #d2bccd 0%, #b38aa8 100%);
+  color: #1e1f2a;
+  background: linear-gradient(135deg, #d3c6d1 0%, #b594ab 100%);
   box-shadow:
-    0 14px 34px rgba(179, 138, 168, 0.18),
+    0 14px 30px rgba(181, 148, 171, 0.14),
     inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }
 
@@ -242,8 +242,8 @@ a {
 
 .button-secondary:hover,
 .button-secondary:focus-visible {
-  border-color: rgba(179, 138, 168, 0.3);
-  box-shadow: 0 10px 24px rgba(179, 138, 168, 0.08);
+  border-color: rgba(181, 148, 171, 0.24);
+  box-shadow: 0 10px 22px rgba(181, 148, 171, 0.06);
 }
 
 .hero-links {
@@ -252,7 +252,7 @@ a {
   gap: 0.8rem 1.2rem;
   margin-top: 1.4rem;
   font-size: 0.82rem;
-  color: #cfc7d1;
+  color: #c7c9d3;
 }
 
 .terminal-card,
@@ -265,7 +265,7 @@ a {
 .education-card,
 .cert-card,
 .contact-section {
-  background: linear-gradient(180deg, rgba(28, 29, 40, 0.9), rgba(18, 19, 28, 0.84));
+  background: linear-gradient(180deg, rgba(24, 30, 42, 0.92), rgba(16, 21, 31, 0.86));
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.04);
@@ -278,7 +278,7 @@ a {
 .profile-card {
   padding: 0.9rem;
   margin-bottom: 1rem;
-  background: linear-gradient(180deg, rgba(28, 29, 40, 0.9), rgba(18, 19, 28, 0.84));
+  background: linear-gradient(180deg, rgba(24, 30, 42, 0.92), rgba(16, 21, 31, 0.86));
 }
 
 .profile-card img {
@@ -288,7 +288,7 @@ a {
   aspect-ratio: 0.82 / 1;
   object-fit: cover;
   border-radius: calc(var(--radius) - 8px);
-  border: 1px solid rgba(179, 138, 168, 0.14);
+  border: 1px solid rgba(181, 148, 171, 0.12);
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03);
 }
 
@@ -323,7 +323,7 @@ a {
   padding: 1.5rem;
   font-size: 0.88rem;
   line-height: 1.8;
-  color: #ebe6ee;
+  color: #e8e8ef;
 }
 
 .prompt,
@@ -383,7 +383,7 @@ details,
   gap: 2rem;
   width: max-content;
   white-space: nowrap;
-  color: #cbc6d1;
+  color: #c6cad2;
   font-family: "IBM Plex Mono", monospace;
   animation: slide 28s linear infinite;
 }
@@ -413,7 +413,7 @@ details,
   font-size: clamp(1.7rem, 4vw, 3rem);
   max-width: 14ch;
   font-weight: 700;
-  color: #f5f2f6;
+  color: #f3f3f6;
 }
 
 .project-grid {
@@ -475,7 +475,7 @@ details,
   font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 0.01em;
-  color: #f4f0f5;
+  color: #f0f1f4;
 }
 
 details {
@@ -558,8 +558,8 @@ summary {
   display: block;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, #7f748f 0%, #b38aa8 100%);
-  box-shadow: 0 0 16px rgba(179, 138, 168, 0.2);
+  background: linear-gradient(90deg, #78839b 0%, #b594ab 100%);
+  box-shadow: 0 0 14px rgba(181, 148, 171, 0.16);
 }
 
 .timeline {
@@ -685,3 +685,4 @@ summary {
     font-size: clamp(2.1rem, 12vw, 3.3rem);
   }
 }
+

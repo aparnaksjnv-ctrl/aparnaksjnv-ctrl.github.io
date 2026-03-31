@@ -1,13 +1,13 @@
 :root {
-  --bg: #09050d;
-  --bg-alt: #13081a;
-  --panel: rgba(28, 13, 34, 0.88);
-  --panel-soft: rgba(20, 10, 26, 0.76);
-  --text: #f7ecf6;
-  --muted: #ccb4ce;
-  --accent: #ff68c6;
-  --accent-soft: rgba(255, 104, 198, 0.16);
-  --line: rgba(219, 128, 233, 0.24);
+  --bg: #0b0710;
+  --bg-alt: #170a18;
+  --panel: rgba(36, 16, 36, 0.82);
+  --panel-soft: rgba(27, 12, 31, 0.72);
+  --text: #faf2f8;
+  --muted: #d6bdcf;
+  --accent: #f45fb0;
+  --accent-soft: rgba(244, 95, 176, 0.16);
+  --line: rgba(236, 161, 223, 0.22);
   --shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
   --radius: 24px;
 }
@@ -25,9 +25,9 @@ body {
   min-height: 100vh;
   color: var(--text);
   background:
-    radial-gradient(circle at top right, rgba(255, 104, 198, 0.16), transparent 24%),
-    radial-gradient(circle at bottom left, rgba(170, 92, 255, 0.18), transparent 22%),
-    linear-gradient(180deg, #050308 0%, #0c0610 42%, #030205 100%);
+    radial-gradient(circle at top right, rgba(244, 95, 176, 0.14), transparent 24%),
+    radial-gradient(circle at bottom left, rgba(180, 101, 214, 0.14), transparent 22%),
+    linear-gradient(180deg, #050308 0%, #110913 42%, #040306 100%);
   font-family: "Cormorant Garamond", "Times New Roman", serif;
   font-weight: 400;
 }
@@ -103,6 +103,7 @@ a {
   align-items: center;
   padding: 1.2rem 0;
   backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 .brand,
@@ -129,6 +130,7 @@ a {
   gap: 1.3rem;
   color: var(--muted);
   font-size: 0.88rem;
+  letter-spacing: 0.02em;
 }
 
 .site-nav a:hover,
@@ -170,14 +172,16 @@ a {
 .hero h1 {
   font-size: clamp(3rem, 8vw, 5.5rem);
   font-weight: 700;
+  color: #fff6fc;
 }
 
 .hero-lead {
-  max-width: 17ch;
-  font-size: clamp(1.05rem, 2vw, 1.55rem);
-  line-height: 1.1;
+  max-width: 22ch;
+  font-size: clamp(1.05rem, 1.9vw, 1.45rem);
+  line-height: 1.2;
   margin: 1rem 0 1.2rem;
   font-weight: 400;
+  color: #f6ddec;
 }
 
 .hero-text,
@@ -224,10 +228,10 @@ a {
 }
 
 .button-primary {
-  color: #200617;
-  background: linear-gradient(135deg, #ff68c6 0%, #c86bff 100%);
+  color: #2d0720;
+  background: linear-gradient(135deg, #ff86cd 0%, #d987ff 100%);
   box-shadow:
-    0 14px 34px rgba(255, 104, 198, 0.24),
+    0 14px 34px rgba(244, 95, 176, 0.24),
     inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }
 
@@ -248,7 +252,7 @@ a {
   gap: 0.8rem 1.2rem;
   margin-top: 1.4rem;
   font-size: 0.82rem;
-  color: #ddb9e0;
+  color: #e6c9df;
 }
 
 .terminal-card,
@@ -261,7 +265,7 @@ a {
 .education-card,
 .cert-card,
 .contact-section {
-  background: linear-gradient(180deg, rgba(35, 14, 39, 0.95), rgba(16, 7, 20, 0.88));
+  background: linear-gradient(180deg, rgba(45, 20, 45, 0.9), rgba(20, 10, 24, 0.84));
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.04);
@@ -274,17 +278,17 @@ a {
 .profile-card {
   padding: 0.9rem;
   margin-bottom: 1rem;
-  background: linear-gradient(180deg, rgba(35, 14, 39, 0.95), rgba(16, 7, 20, 0.88));
+  background: linear-gradient(180deg, rgba(45, 20, 45, 0.9), rgba(20, 10, 24, 0.84));
 }
 
 .profile-card img {
   display: block;
-  width: min(100%, 320px);
+  width: min(100%, 290px);
   margin: 0 auto;
-  aspect-ratio: 0.9 / 1;
+  aspect-ratio: 0.82 / 1;
   object-fit: cover;
   border-radius: calc(var(--radius) - 8px);
-  border: 1px solid rgba(255, 104, 198, 0.2);
+  border: 1px solid rgba(244, 95, 176, 0.2);
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03);
 }
 
@@ -293,7 +297,7 @@ a {
   gap: 0.45rem;
   padding: 0.9rem 1rem;
   border-bottom: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .terminal-top span {
@@ -343,13 +347,14 @@ details,
 .timeline-card,
 .education-card,
 .cert-card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.02));
 }
 
 .metric-grid article {
   padding: 1.2rem;
   border: 1px solid var(--line);
   border-radius: 18px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 .metric-grid span {
@@ -408,6 +413,7 @@ details,
   font-size: clamp(1.7rem, 4vw, 3rem);
   max-width: 14ch;
   font-weight: 700;
+  color: #fff5fc;
 }
 
 .project-grid {
@@ -466,6 +472,7 @@ details,
   font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 0.01em;
+  color: #fff3fb;
 }
 
 details {
@@ -587,6 +594,37 @@ summary {
 .profile-card,
 .contact-section {
   backdrop-filter: blur(12px);
+}
+
+.project-card,
+.skill-card,
+.service-card,
+.timeline-card,
+.education-card,
+.cert-card,
+.skill-graph-panel,
+.terminal-card,
+.profile-card,
+.contact-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before,
+.skill-card::before,
+.service-card::before,
+.timeline-card::before,
+.education-card::before,
+.cert-card::before,
+.skill-graph-panel::before,
+.terminal-card::before,
+.profile-card::before,
+.contact-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), transparent 35%);
+  pointer-events: none;
 }
 
 [data-reveal] {
